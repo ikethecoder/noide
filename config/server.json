@@ -1,7 +1,8 @@
 {
   "server": {
     "labels": "web",
-    "tls": false
+    "tls": false,
+    "oauth": "generic"
   },
   "logging": {
     "reporters": [{

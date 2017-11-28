@@ -3,6 +3,7 @@ var Joi = require('joi')
 var serverSchema = Joi.object().required().keys({
   host: Joi.string().hostname(),
   port: Joi.number().required(),
+  oauth: Joi.number(),
   tls: Joi.boolean(),
   labels: Joi.string()
 })
