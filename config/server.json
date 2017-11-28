@@ -1,6 +1,7 @@
 {
   "server": {
-    "labels": "web"
+    "labels": "web",
+    "tls": false
   },
   "logging": {
     "reporters": [{

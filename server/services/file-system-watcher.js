@@ -1,7 +1,7 @@
 var chokidar = require('chokidar')
 var p = require('path')
 var FileSystemObject = require('../file-system-object')
-var root = process.cwd()
+var root = '/working';
 
 var watcher = chokidar.watch(root, {
   // atomic: true,

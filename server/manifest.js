@@ -2,13 +2,25 @@ const config = require('../config')
 
 const oauth = __dirname + '/oauth'
 
+var fs = require('fs');
+
+var tls = false;
+if (config.server.tls) {
+    tls = {
+      key: fs.readFileSync('/var/local/consul/ssl/consul.key'),
+      cert: fs.readFileSync('/var/local/consul/ssl/consul.cert'),
+      ca: fs.readFileSync('/var/local/consul/ssl/ca.cert')
+    };
+}
+
 const manifest = {
   server: {},
   connections: [
     {
       port: config.server.port,
       host: config.server.host,
-      labels: config.server.labels
+      labels: config.server.labels,
+      tls: tls
     }
   ],
 

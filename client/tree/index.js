@@ -18,6 +18,9 @@ function makeTree (files) {
     for (i = 0; i < list.length; i++) {
       obj = list[i]
       var parent = lookup[obj[parentAttr]]
+      if (obj[parentAttr] == obj[idAttr]) {
+        treeList.push(obj)
+      } else
       if (parent) {
         obj.parent = parent
         lookup[obj[parentAttr]][childrenAttr].push(obj)
