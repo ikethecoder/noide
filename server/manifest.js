@@ -1,5 +1,7 @@
 const config = require('../config')
 
+const oauth = __dirname + '/oauth'
+
 const manifest = {
   server: {},
   connections: [
@@ -9,6 +11,7 @@ const manifest = {
       labels: config.server.labels
     }
   ],
+
   registrations: [
     {
       plugin: {
@@ -19,6 +22,9 @@ const manifest = {
       plugin: {
         register: 'vision'
       }
+    },
+    {
+      plugin: oauth
     },
     {
       plugin: {

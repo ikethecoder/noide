@@ -4,6 +4,7 @@ module.exports = {
   method: 'GET',
   path: '/',
   config: {
+    auth: 'generic',
     handler: function (request, reply) {
       var cwd = process.cwd()
       var lastSep = cwd.lastIndexOf(path.sep)

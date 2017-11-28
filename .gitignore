@@ -5,3 +5,4 @@ logs
 config/pm2.json
 client-config.json
 server-config.json
+.idea

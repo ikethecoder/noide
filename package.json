@@ -1,6 +1,6 @@
 {
   "name": "noide",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Web Editor built on hapi and nes websockets using browserify, superviews.js, bootstrap and the ACE editor.",
   "keywords": [
     "Browser editor",
@@ -57,20 +57,21 @@
     "standard": "6.0.4",
     "standard-format": "2.1.1",
     "superviewify": "0.4.2",
-    "vision": "4.0.1"
+    "vision": "4.0.1",
+    "bell": "8.9.0"
   },
   "devDependencies": {
     "wisk": "1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/davidjamesstone/noide.git"
+    "url": "http://github.com/ikethecoder/noide.git"
   },
   "bugs": {
-    "url": "http://github.com/davidjamesstone/noide/issues",
-    "email": "davidjamesstone@gmail.com"
+    "url": "http://github.com/ikethecoder/noide/issues",
+    "email": "ikethecoder@canzea.com"
   },
-  "author": "David Stone <davidjamesstone@gmail.com>",
+  "author": "Ikethecoder <ikethecoder@canzea.com>",
   "license": "MIT",
   "standard": {
     "ignore": [
