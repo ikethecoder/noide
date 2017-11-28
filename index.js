@@ -1,4 +1,4 @@
-const Glupe = require('glupe')
+const Glupe = require('./glupe')
 const config = require('./config')
 const sock = require('./server/file-system-watcher')
 const appName = require('./package.json').name
