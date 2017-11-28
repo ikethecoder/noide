@@ -4,7 +4,8 @@ var UndoManager = window.ace.require('ace/undomanager').UndoManager
 var ModeList = window.ace.require('ace/ext/modelist')
 
 function Session (file, contents) {
-  var editSession = new EditSession(contents, ModeList.getModeForPath(file))
+  var mode = ModeList.getModeForPath(file);
+  var editSession = new EditSession(contents, mode.mode)
   editSession.setUseWorker(false)
   editSession.setTabSize(config.ace.tabSize)
   editSession.setUseSoftTabs(config.ace.useSoftTabs)

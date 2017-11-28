@@ -1,6 +1,6 @@
 {
   "name": "noide",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "description": "Web Editor built on hapi and nes websockets using browserify, superviews.js, bootstrap and the ACE editor.",
   "keywords": [
     "Browser editor",
@@ -36,6 +36,7 @@
     "extend": "3.0.0",
     "font-awesome": "4.5.0",
     "glue": "4.2.1",
+    "bell": "8.9.0",
     "good": "6.5.0",
     "good-console": "5.3.1",
     "good-file": "5.1.2",
@@ -48,7 +49,7 @@
     "jquery": "2.2.1",
     "minimist": "1.2.0",
     "ncp": "2.0.0",
-    "nes": "6.5.1",
+    "nes": "3.0.0",
     "node-sass": "3.4.2",
     "page": "1.6.4",
     "querystring": "0.2.0",
@@ -57,21 +58,20 @@
     "standard": "6.0.4",
     "standard-format": "2.1.1",
     "superviewify": "0.4.2",
-    "vision": "4.0.1",
-    "bell": "8.9.0"
+    "vision": "4.0.1"
   },
   "devDependencies": {
     "wisk": "1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/ikethecoder/noide.git"
+    "url": "http://github.com/davidjamesstone/noide.git"
   },
   "bugs": {
-    "url": "http://github.com/ikethecoder/noide/issues",
-    "email": "ikethecoder@canzea.com"
+    "url": "http://github.com/davidjamesstone/noide/issues",
+    "email": "davidjamesstone@gmail.com"
   },
-  "author": "Ikethecoder <ikethecoder@canzea.com>",
+  "author": "David Stone <davidjamesstone@gmail.com>",
   "license": "MIT",
   "standard": {
     "ignore": [

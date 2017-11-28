@@ -114,7 +114,7 @@ client.connect(function (err) {
             return util.handleError(err)
           }
 
-          session = noide.addSession(file, payload.contents)
+          session = noide.addSession(relativePath, payload.contents)
           setSession()
         })
       }

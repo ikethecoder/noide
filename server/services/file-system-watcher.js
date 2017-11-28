@@ -6,7 +6,7 @@ var root = process.cwd()
 var watcher = chokidar.watch(root, {
   // atomic: true,
   alwaysStat: true,
-  usePolling: true,
+  usePolling: false,
   ignoreInitial: true,
   ignored: function (path, stat) {
     // This function gets called twice per path.
