@@ -1,7 +1,5 @@
 {
   "server": {
-    "host": "127.0.0.1",
-    "port": 6000,
     "labels": "web"
   },
   "logging": {
