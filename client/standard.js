@@ -10,7 +10,7 @@ function linter () {
       if (session) {
         var editSession = session.editSession
         client.request({
-          path: '/standard',
+          path: '/ide/standard',
           payload: {
             value: editSession.getValue()
           },

@@ -14,7 +14,8 @@ if (config.server.tls) {
 }
 
 const manifest = {
-  server: {},
+  server: {
+  },
   connections: [
     {
       port: config.server.port,
@@ -37,16 +38,17 @@ const manifest = {
     },
     {
       plugin: {
-        register: oauth,
-        options: {
-            client_id : config.server.client_id,
-            client_secret : config.server.client_secret,
-        }
+        register: 'nes'
       }
     },
     {
       plugin: {
-        register: 'nes'
+        register: oauth,
+        options: {
+            client_id : config.server.client_id,
+            client_secret : config.server.client_secret,
+            is_secure : config.server.tls
+        }
       }
     },
     {

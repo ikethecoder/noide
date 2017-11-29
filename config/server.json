@@ -1,16 +1,30 @@
 {
   "server": {
     "labels": "web",
-    "tls": true,
-    "oauth": "generic",
+    "tls": false,
     "client_id": "2222-0000-0000-0000",
-    "client_secret": "2222-0000-0000-0001"
+    "client_secret": "2222-0000-0000-0001",
+    "folder": "bin"
   },
   "logging": {
-    "reporters": [{
-      "reporter": "good-console",
-      "events": { "log": ["info", "error"], "error": "*" }
-    }]
+    "reporters": {
+      "myConsoleReporter": [
+        {
+          "module": "good-squeeze",
+          "name": "Squeeze",
+          "args": [
+            {
+              "log": "*",
+              "response": "*"
+            }
+          ]
+        },
+        {
+          "module": "good-console"
+        },
+        "stdout"
+      ]
+    }
   },
   "views": {
     "isCached": false

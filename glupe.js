@@ -27,6 +27,7 @@ function Glupe (relativeTo, options, callback) {
     if (checkDirectorySync(routesDir)) {
       let routes = requireDirectory(module, routesDir)
       for (let key in routes) {
+        routes[key].path = '/ide' + routes[key].path;
         server.route(routes[key])
       }
     }

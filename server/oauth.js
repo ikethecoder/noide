@@ -13,7 +13,7 @@ module.exports.register = function (server, options, next) {
                                     password: 'cookie_encryption_password_secure',
                                     clientId: options.client_id,
                                     clientSecret: options.client_secret,
-                                    isSecure: true     // Terrible idea but required if not using HTTPS especially if developing locally
+                                    isSecure: options.is_secure     // Terrible idea but required if not using HTTPS especially if developing locally
                                 });
     });
     console.log("REGISTERED");

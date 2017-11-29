@@ -69,55 +69,27 @@ Glupe.compose(__dirname, config, function (err, server) {
   server.ext('onPostHandler', onPostHandler)
   server.ext('onPreResponse', preResponse)
 
-  //server.connection({ port: 5500 });
+    server.start(function (err) {
+        var details = {
+          name: appName,
+          uri: server.info.uri
+        }
 
-    server.start();
-  /*
-   * Start the server
-   */
-    // Register bell with the server
-    /*
-    server.register(require('bell'), function (err) {
+        if (err) {
+          details.error = err
+          details.message = 'Failed to start ' + details.name
+          server.log('error', details)
+          throw err
+        } else {
+          details.config = config
+          details.message = 'Started ' + details.name
+          server.log('info', details)
+          console.info(details.message)
 
-        // Declare an authentication strategy using the bell scheme
-        // with the name of the provider, cookie encryption password,
-        // and the OAuth client credentials.
-        server.auth.strategy('twitter', 'bell', {
-            provider: 'twitter',
-            password: 'cookie_encryption_password_secure',
-            clientId: 'my_twitter_client_id',
-            clientSecret: 'my_twitter_client_secret',
-            isSecure: false     // Terrible idea but required if not using HTTPS especially if developing locally
-        });
+          sock(server)
+          server.subscription('/io')
+          server.subscription('/io/pids')
+        }
 
-        server.start();
-        /*
-        server.start(function (err) {
-            var details = {
-              name: appName,
-              uri: server.info.uri
-            }
-
-            if (err) {
-              details.error = err
-              details.message = 'Failed to start ' + details.name
-              server.log('error', details)
-              throw err
-            } else {
-              details.config = config
-              details.message = 'Started ' + details.name
-              server.log('info', details)
-              console.info(details.message)
-
-              sock(server)
-              server.subscription('/io')
-              server.subscription('/io/pids')
-            }
-
-        })
-
-
-    });
-    */
-
+    })
 })

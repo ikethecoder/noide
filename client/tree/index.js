@@ -49,7 +49,6 @@ function Tree (el) {
   }
 
   function render () {
-    console.log('Render tree')
     patch(el, view, makeTree(noide.files)[0].children, true, noide.current, showMenu, onClick)
   }
 

@@ -1,15 +1,17 @@
 var client = require('./client')
 
+const prefix = '/ide'
+
 function readFile (path, callback) {
   client.request({
-    path: '/readfile?path=' + path,
+    path: prefix + '/readfile?path=' + path,
     method: 'GET'
   }, callback)
 }
 
 function writeFile (path, contents, callback) {
   client.request({
-    path: '/writefile',
+    path: prefix + '/writefile',
     payload: {
       path: path,
       contents: contents
@@ -20,7 +22,7 @@ function writeFile (path, contents, callback) {
 
 function mkdir (path, callback) {
   client.request({
-    path: '/mkdir',
+    path: prefix + '/mkdir',
     payload: {
       path: path
     },
@@ -29,7 +31,7 @@ function mkdir (path, callback) {
 }
 
 function mkfile (path, callback) {
-  client.request({ path: '/mkfile',
+  client.request({ path: prefix + '/mkfile',
     payload: {
       path: path
     },
@@ -39,7 +41,7 @@ function mkfile (path, callback) {
 
 function copy (source, destination, callback) {
   client.request({
-    path: '/copy',
+    path: prefix + '/copy',
     payload: {
       source: source,
       destination: destination
@@ -50,7 +52,7 @@ function copy (source, destination, callback) {
 
 function rename (oldPath, newPath, callback) {
   client.request({
-    path: '/rename',
+    path: prefix + '/rename',
     payload: {
       oldPath: oldPath,
       newPath: newPath
@@ -61,7 +63,7 @@ function rename (oldPath, newPath, callback) {
 
 function remove (path, callback) {
   client.request({
-    path: '/remove',
+    path: prefix + '/remove',
     payload: {
       path: path
     },

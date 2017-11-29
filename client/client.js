@@ -1,5 +1,6 @@
 var Nes = require('nes/client')
 var host = window.location.host
-var client = new Nes.Client('wss://' + host)
+var config = require('../config/client')
+var client = new Nes.Client(config.socket.protocol + '://' + host)
 
 module.exports = client

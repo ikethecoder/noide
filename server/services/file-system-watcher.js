@@ -1,9 +1,9 @@
+const config = require('../../config')
 var chokidar = require('chokidar')
 var p = require('path')
 var FileSystemObject = require('../file-system-object')
-var root = '/working';
 
-var watcher = chokidar.watch(root, {
+var watcher = chokidar.watch(config.server.folder, {
   // atomic: true,
   alwaysStat: true,
   usePolling: false,

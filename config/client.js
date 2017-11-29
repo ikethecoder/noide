@@ -7,6 +7,9 @@ var config = {
     fontSize: 12,
     theme: 'monokai',
     useSoftTabs: true
+  },
+  socket: {
+    protocol: 'ws'
   }
 }
 

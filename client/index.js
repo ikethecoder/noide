@@ -22,7 +22,7 @@ client.connect(function (err) {
     return util.handleError(err)
   }
 
-  client.request('/watched', function (err, payload) {
+  client.request('/ide/watched', function (err, payload) {
     if (err) {
       return util.handleError(err)
     }
