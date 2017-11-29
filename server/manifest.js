@@ -36,7 +36,13 @@ const manifest = {
       }
     },
     {
-      plugin: oauth
+      plugin: {
+        register: oauth,
+        options: {
+            client_id : config.server.client_id,
+            client_secret : config.server.client_secret,
+        }
+      }
     },
     {
       plugin: {

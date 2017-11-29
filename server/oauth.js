@@ -11,8 +11,8 @@ module.exports.register = function (server, options, next) {
                                 server.auth.strategy('generic', 'bell', {
                                     provider: Provider.call(null, {}),
                                     password: 'cookie_encryption_password_secure',
-                                    clientId: '2222-0000-0000-0000',
-                                    clientSecret: '2222-0000-0000-0001',
+                                    clientId: options.client_id,
+                                    clientSecret: options.client_secret,
                                     isSecure: true     // Terrible idea but required if not using HTTPS especially if developing locally
                                 });
     });

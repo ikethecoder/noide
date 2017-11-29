@@ -1,8 +1,10 @@
 {
   "server": {
     "labels": "web",
-    "tls": false,
-    "oauth": "generic"
+    "tls": true,
+    "oauth": "generic",
+    "client_id": "2222-0000-0000-0000",
+    "client_secret": "2222-0000-0000-0001"
   },
   "logging": {
     "reporters": [{

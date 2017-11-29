@@ -14,8 +14,6 @@ exports = module.exports = function (options) {
         scope: ['basic'],
         scopeSeparator: ' ',
         profile: function (credentials, params, get, callback) {
-
-            console.log("PARAMS = "+JSON.stringify(params));
             get(user, null, (profile) => {
 
                 credentials.profile = profile;
