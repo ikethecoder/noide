@@ -1,3 +1,4 @@
+const path = require('path')
 const Glupe = require('./glupe')
 const config = require('./config')
 const sock = require('./server/file-system-watcher')
@@ -66,10 +67,12 @@ Glupe.compose(__dirname, config, function (err, server) {
     return reply.continue()
   }
 
+  process.chdir(path.resolve(config.server.folder))
+
   server.ext('onPostHandler', onPostHandler)
   server.ext('onPreResponse', preResponse)
 
-    server.start(function (err) {
+  server.start(function (err) {
         var details = {
           name: appName,
           uri: server.info.uri
@@ -91,5 +94,5 @@ Glupe.compose(__dirname, config, function (err, server) {
           server.subscription('/io/pids')
         }
 
-    })
+  })
 })

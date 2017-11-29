@@ -3,7 +3,7 @@ var chokidar = require('chokidar')
 var p = require('path')
 var FileSystemObject = require('../file-system-object')
 
-var watcher = chokidar.watch(config.server.folder, {
+var watcher = chokidar.watch(p.resolve(config.server.folder), {
   // atomic: true,
   alwaysStat: true,
   usePolling: false,
