@@ -7,9 +7,9 @@ var fs = require('fs');
 var tls = false;
 if (config.server.tls) {
     tls = {
-      key: fs.readFileSync('/var/local/consul/ssl/consul.key'),
-      cert: fs.readFileSync('/var/local/consul/ssl/consul.cert'),
-      ca: fs.readFileSync('/var/local/consul/ssl/ca.cert')
+      key: fs.readFileSync(config.server.tls.key),
+      cert: fs.readFileSync(config.server.tls.cert),
+      ca: fs.readFileSync(config.server.tls.ca)
     };
 }
 

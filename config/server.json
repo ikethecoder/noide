@@ -1,9 +1,13 @@
 {
   "server": {
     "labels": "web",
-    "tls": false,
     "client_id": "2222-0000-0000-0000",
     "client_secret": "2222-0000-0000-0001",
+    "_tls": {
+      "key": "",
+      "cert": "",
+      "ca": ""
+    },
     "folder": "bin"
   },
   "logging": {

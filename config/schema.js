@@ -7,7 +7,8 @@ var serverSchema = Joi.object().required().keys({
   folder: Joi.string(),
   client_id: Joi.string(),
   client_secret: Joi.string(),
-  tls: Joi.boolean(),
+  tls: Joi.object(),
+  _tls: Joi.object(),
   labels: Joi.string()
 })
 
