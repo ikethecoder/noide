@@ -1,0 +1,37 @@
+{
+  "server": {
+    "labels": "web",
+    "client_id": "2222-0000-0000-0000",
+    "client_secret": "2222-0000-0000-0001",
+    "oauth": "generic",
+    "tls": {
+      "key": "/etc/node/ssl/ide.key",
+      "cert": "/etc/node/ssl/ide.cert",
+      "ca": "/etc/node/ssl/ca.cert"
+    },
+    "folder": "/working"
+  },
+  "logging": {
+    "reporters": {
+      "myConsoleReporter": [
+        {
+          "module": "good-squeeze",
+          "name": "Squeeze",
+          "args": [
+            {
+              "log": "*",
+              "response": "*"
+            }
+          ]
+        },
+        {
+          "module": "good-console"
+        },
+        "stdout"
+      ]
+    }
+  },
+  "views": {
+    "isCached": false
+  }
+}
