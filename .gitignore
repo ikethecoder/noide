@@ -2,6 +2,7 @@
 node_modules
 npm-debug.log
 logs
+temp
 config/pm2.json
 client-config.json
 server-config.json

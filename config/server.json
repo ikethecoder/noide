@@ -8,7 +8,7 @@
       "cert": "/etc/node/ssl/ide.cert",
       "ca": "/etc/node/ssl/ca.cert"
     },
-    "folder": "bin"
+    "folder": "temp"
   },
   "logging": {
     "reporters": {

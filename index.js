@@ -4,6 +4,8 @@ const config = require('./config')
 const sock = require('./server/file-system-watcher')
 const appName = require('./package.json').name
 
+const arules = require ('./server/services/abstract-rules')
+
 console.log("DIRE = "+__dirname);
 Glupe.compose(__dirname, config, function (err, server) {
   if (err) {
@@ -90,6 +92,8 @@ Glupe.compose(__dirname, config, function (err, server) {
           console.info(details.message)
 
           sock(server)
+          arules(server)
+
           server.subscription('/io')
           server.subscription('/io/pids')
         }
