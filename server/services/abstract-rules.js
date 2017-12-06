@@ -72,7 +72,11 @@ function registerRule (file, callback) {
           try {
             var ff = p.relative(root, file)
             if (fileCatalog.hasOwnProperty(ff)) {
-                fileCatalog[ff].unsubscribe();
+                try {
+                    fileCatalog[ff].unsubscribe();
+                } catch (e) {
+                    console.log("WARN: Eval error " + e);
+                }
             }
             var func = vm.run (code, 'imports.js');
             console.log("Subscribing to = "+ff);

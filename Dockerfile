@@ -1,9 +1,6 @@
 FROM node:6.9.4
 
-ENV PORT 7000
 ENV NODE_ENV production
-
-COPY package.json .
 
 RUN mkdir noide
 
