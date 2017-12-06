@@ -9,7 +9,7 @@ module.exports.register = function (server, options, next) {
                                 // with the name of the provider, cookie encryption password,
                                 // and the OAuth client credentials.
                                 server.auth.strategy('generic', 'bell', {
-                                    provider: Provider.call(null, {}),
+                                    provider: Provider.call(options, {}),
                                     password: 'cookie_encryption_password_secure',
                                     clientId: options.client_id,
                                     clientSecret: options.client_secret,

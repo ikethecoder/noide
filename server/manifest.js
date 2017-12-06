@@ -47,7 +47,8 @@ const manifest = {
         options: {
             client_id : config.server.client_id,
             client_secret : config.server.client_secret,
-            is_secure : config.server.tls ? true : false
+            is_secure : config.server.tls ? true : false,
+            uri : config.server.uri
         }
       }
     },

@@ -3,6 +3,7 @@
     "labels": "web",
     "client_id": "2222-0000-0000-0000",
     "client_secret": "2222-0000-0000-0001",
+    "uri": "",
     "_tls": {
       "key": "/etc/node/ssl/ide.key",
       "cert": "/etc/node/ssl/ide.cert",

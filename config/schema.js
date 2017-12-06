@@ -5,6 +5,7 @@ var serverSchema = Joi.object().required().keys({
   port: Joi.number().required(),
   oauth: Joi.string(),
   folder: Joi.string(),
+  uri: Joi.string(),
   client_id: Joi.string(),
   client_secret: Joi.string(),
   tls: Joi.object(),
