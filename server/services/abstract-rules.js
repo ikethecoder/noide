@@ -21,6 +21,7 @@ const vm = new NodeVM({
         "WRITE": helper.WRITE,
         "RESOURCE": helper.RESOURCE,
         "RESOURCES": helper.RESOURCES,
+        "Rx": Rx,
         "files": fileCatalog,
         "broadcast": broadcast,
         "baseDir": folder = p.resolve(config.server.folder)
