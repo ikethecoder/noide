@@ -2,7 +2,7 @@ exports = module.exports = function (options) {
 
     options = options || {};
 
-    const uri = options.uri || 'https://es0390.canzea.cc/gw';
+    const uri = options.uri || 'https://xxxxxx.canzea.cc/gw';
     const user = uri + '/me';
 
     return {
