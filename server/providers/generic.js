@@ -9,7 +9,7 @@ exports = module.exports = function (options) {
         name: "generic",
         protocol: 'oauth2',
         useParamsAuth: true,
-        auth: uri + '/authorize',
+        auth: uri + '/oauth/authorize',
         token: uri + '/oauth/token',
         scope: ['basic'],
         scopeSeparator: ' ',
